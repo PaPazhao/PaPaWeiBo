@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "LZTabBarController.h"
 @interface AppDelegate ()
 
 @end
@@ -22,8 +22,7 @@
     self.window = [[UIWindow alloc]init];
     self.window.frame = [UIScreen mainScreen].bounds;
  
-    
-    self.window.rootViewController = [[UITabBarController alloc]init];
+    self.window.rootViewController = [[LZTabBarController alloc]init];
 
     // 3、显示windo
     [self.window makeKeyAndVisible];

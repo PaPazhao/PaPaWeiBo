@@ -12,6 +12,8 @@
 		5E39D8461C8144C000AF29E7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E39D8341C8144C000AF29E7 /* AppDelegate.m */; };
 		5E39D8471C8144C000AF29E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E39D8351C8144C000AF29E7 /* main.m */; };
 		5E39D84B1C8147E300AF29E7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E39D84A1C8147E300AF29E7 /* Images.xcassets */; };
+		5E39D8721C833E9500AF29E7 /* LZTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E39D8711C833E9500AF29E7 /* LZTabBarController.m */; };
+		5E39D8751C83455B00AF29E7 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E39D8741C83455B00AF29E7 /* UIImage+Extension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,10 @@
 		5E39D8341C8144C000AF29E7 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5E39D8351C8144C000AF29E7 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5E39D84A1C8147E300AF29E7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5E39D8701C833E9500AF29E7 /* LZTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZTabBarController.h; sourceTree = "<group>"; };
+		5E39D8711C833E9500AF29E7 /* LZTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZTabBarController.m; sourceTree = "<group>"; };
+		5E39D8731C83455B00AF29E7 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
+		5E39D8741C83455B00AF29E7 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +255,8 @@
 		5E39D8291C8144BF00AF29E7 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				5E39D8731C83455B00AF29E7 /* UIImage+Extension.h */,
+				5E39D8741C83455B00AF29E7 /* UIImage+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -256,6 +264,8 @@
 		5E39D8301C8144C000AF29E7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5E39D8701C833E9500AF29E7 /* LZTabBarController.h */,
+				5E39D8711C833E9500AF29E7 /* LZTabBarController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -508,8 +518,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E39D8721C833E9500AF29E7 /* LZTabBarController.m in Sources */,
 				5E39D8471C8144C000AF29E7 /* main.m in Sources */,
 				5E39D8461C8144C000AF29E7 /* AppDelegate.m in Sources */,
+				5E39D8751C83455B00AF29E7 /* UIImage+Extension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
