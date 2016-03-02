@@ -8,6 +8,12 @@
 
 #import "LZTabBarController.h"
 #import "UIImage+Extension.h"
+#import "ProfileController.h"
+#import "HomeController.h"
+#import "DiscoverController.h"
+#import "MessageController.h"
+#import "LZNavigationController.h"
+
 @interface LZTabBarController ()
 
 @end
@@ -17,23 +23,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad]; 
     
-    UIViewController *home = [[UIViewController alloc]init];
+    HomeController *home = [[HomeController alloc]init];
     [self addChildViewController:home titleName:@"首页"
                        imageName:@"tabbar_home"
                     selectedName:@"tabbar_home_selected"];
     
-    UIViewController *discover = [[UIViewController alloc]init];
+    DiscoverController *discover = [[DiscoverController alloc]init];
     [self addChildViewController:discover titleName:@"发现"
                        imageName:@"tabbar_discover"
                     selectedName:@"tabbar_discover_selected"];
     
-    UIViewController *message = [[UIViewController alloc]init];
+    MessageController *message = [[MessageController alloc]init];
     [self addChildViewController:message titleName:@"消息"
                        imageName:@"tabbar_message_center"
                     selectedName:@"tabbar_message_center_selected"];
     
-    
-    UIViewController *profile = [[UIViewController alloc]init];
+    ProfileController *profile = [[ProfileController alloc]init];
     [self addChildViewController:profile titleName:@"我"
                        imageName:@"tabbar_profile"
                     selectedName:@"tabbar_profile_selected"];
@@ -45,12 +50,20 @@
                       titleName:(NSString *)title
                       imageName:(NSString *)imageName
                    selectedName:(NSString *)selectedName{
-
-    childController.tabBarItem.title = title;
+    
+    // 设置导航标题和tabbar的标题，这一句代码等效下面两行
+    childController.title = title;
+    
+//    childController.navigationItem.title = title;   // 设置导航条的标题
+//    childController.tabBarItem.title = title;       // 设置tabBar的标题
+    childController.view.backgroundColor = LZRamomColor;
     childController.tabBarItem.selectedImage = [self originalImageWithName:selectedName];
     childController.tabBarItem.image = [self originalImageWithName:imageName];
     self.view.backgroundColor = [UIColor redColor];
-    [self addChildViewController:childController];
+ 
+    // 为每个控制器套一层导航控制器
+    LZNavigationController *nav = [[LZNavigationController alloc]initWithRootViewController:childController];
+    [self addChildViewController:nav];
 }
 
 
