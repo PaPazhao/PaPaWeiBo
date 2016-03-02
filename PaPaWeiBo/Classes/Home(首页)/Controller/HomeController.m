@@ -9,7 +9,29 @@
 #import "HomeController.h"
 
 @implementation HomeController
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    // 添加导航栏左边的 letbarButtonItem
+    self.navigationItem.leftBarButtonItem =
+    [UIBarButtonItem itemButtonWithImageName:@"navigationbar_friendsearch"
+                               highImageName:@"navigationbar_friendsearch_highlighted"
+                                      target:self action:@selector(friendsearch)];
+    // 添加导航栏右边边的 letbarButtonItem
+    self.navigationItem.rightBarButtonItem =
+    [UIBarButtonItem itemButtonWithImageName:@"navigationbar_pop"
+                               highImageName:@"navigationbar_pop_highlighted"
+                                      target:self action:@selector(pop)];
 
+}
+
+- (void)friendsearch {
+    LZLog(@"friendsearch");
+}
+
+- (void)pop {
+    LZLog(@"pop");
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;

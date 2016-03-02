@@ -20,6 +20,8 @@
 		5E39D8811C834DAC00AF29E7 /* MessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E39D8801C834DAC00AF29E7 /* MessageController.m */; };
 		5E39D8841C834E4200AF29E7 /* ProfileController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E39D8831C834E4200AF29E7 /* ProfileController.m */; };
 		5EF2FCF61C8726C000D4FB9C /* LZNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF2FCF51C8726C000D4FB9C /* LZNavigationController.m */; };
+		5EF2FCFA1C8736FA00D4FB9C /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF2FCF91C8736FA00D4FB9C /* UIView+Extension.m */; };
+		5EF2FCFD1C87380400D4FB9C /* UIBarButtonItem+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF2FCFC1C87380400D4FB9C /* UIBarButtonItem+Extention.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,10 @@
 		5EF2FCF41C8726C000D4FB9C /* LZNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZNavigationController.h; sourceTree = "<group>"; };
 		5EF2FCF51C8726C000D4FB9C /* LZNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZNavigationController.m; sourceTree = "<group>"; };
 		5EF2FCF71C87285400D4FB9C /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		5EF2FCF81C8736FA00D4FB9C /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		5EF2FCF91C8736FA00D4FB9C /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		5EF2FCFB1C87380400D4FB9C /* UIBarButtonItem+Extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extention.h"; sourceTree = "<group>"; };
+		5EF2FCFC1C87380400D4FB9C /* UIBarButtonItem+Extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extention.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,6 +289,10 @@
 			children = (
 				5E39D8731C83455B00AF29E7 /* UIImage+Extension.h */,
 				5E39D8741C83455B00AF29E7 /* UIImage+Extension.m */,
+				5EF2FCF81C8736FA00D4FB9C /* UIView+Extension.h */,
+				5EF2FCF91C8736FA00D4FB9C /* UIView+Extension.m */,
+				5EF2FCFB1C87380400D4FB9C /* UIBarButtonItem+Extention.h */,
+				5EF2FCFC1C87380400D4FB9C /* UIBarButtonItem+Extention.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -551,7 +561,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E39D87B1C834D7A00AF29E7 /* DiscoverController.m in Sources */,
+				5EF2FCFD1C87380400D4FB9C /* UIBarButtonItem+Extention.m in Sources */,
 				5E39D87E1C834D9700AF29E7 /* HomeController.m in Sources */,
+				5EF2FCFA1C8736FA00D4FB9C /* UIView+Extension.m in Sources */,
 				5E39D8841C834E4200AF29E7 /* ProfileController.m in Sources */,
 				5E39D8721C833E9500AF29E7 /* LZTabBarController.m in Sources */,
 				5E39D8471C8144C000AF29E7 /* main.m in Sources */,
