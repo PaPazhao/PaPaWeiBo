@@ -8,6 +8,7 @@
 
 #import "HomeController.h"
 
+
 @implementation HomeController
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -33,6 +34,7 @@
     LZLog(@"pop");
 }
 
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
@@ -57,9 +59,9 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    UIViewController *vc = [[UIViewController alloc]init];
-    vc.hidesBottomBarWhenPushed = YES;
-    vc.view.backgroundColor = [UIColor redColor];
-    [self.navigationController pushViewController:vc animated:YES];
+//    TwoViewController *vc = [[TwoViewController alloc]init];
+//    vc.hidesBottomBarWhenPushed = YES;
+//    vc.view.backgroundColor = [UIColor redColor];
+//    [self.navigationController pushViewController:vc animated:YES];
 }
 @end
