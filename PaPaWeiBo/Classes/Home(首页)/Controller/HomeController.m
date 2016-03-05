@@ -7,12 +7,47 @@
 //
 
 #import "HomeController.h"
-
+#import "LZTitleButton.h"
 
 @implementation HomeController
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self setupNavigationItem];
+    
+    //设置导航栏的标题button
+    [self setupNavigationTitleView];
+    
+    UITextField *textField = [[UITextField alloc] init];
+    textField.backgroundColor = [UIColor redColor];
+    textField.frame = CGRectMake(100, 100, 150, 30);
+    textField.inputAccessoryView = [[[NSBundle mainBundle] loadNibNamed:@"KeyboardTool" owner:nil options:nil] lastObject];
+    [self.view addSubview:textField];
+}
+
+
+#pragma mark 设置导航栏的内容
+/**
+ *  设置导航栏的标题button
+ */
+- (void)setupNavigationTitleView {
+    LZTitleButton *titleView = [[LZTitleButton alloc]init];
+    titleView.width = 100;
+    titleView.height = 30;
+    [titleView setTitle:@"首页" forState:UIControlStateNormal];
+    [titleView setImage:[UIImage imageNamed:@"navigationbar_arrow_down"] forState:UIControlStateNormal];
+    [titleView addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.titleView = titleView;
+}
+
+- (void)buttonClick:(UIButton *)button {
+    [button setImage:[UIImage imageNamed:@"navigationbar_arrow_up"] forState:UIControlStateNormal];
+}
+
+/**
+ *  设置导航栏的 leftBarButtonItem，letbarButtonItem
+ */
+- (void)setupNavigationItem {
     // 添加导航栏左边的 letbarButtonItem
     self.navigationItem.leftBarButtonItem =
     [UIBarButtonItem itemButtonWithImageName:@"navigationbar_friendsearch"
@@ -23,12 +58,6 @@
     [UIBarButtonItem itemButtonWithImageName:@"navigationbar_pop"
                                highImageName:@"navigationbar_pop_highlighted"
                                       target:self action:@selector(pop)];
-    
-    UITextField *textField = [[UITextField alloc] init];
-    textField.backgroundColor = [UIColor redColor];
-    textField.frame = CGRectMake(100, 100, 100, 30);
-    textField.inputAccessoryView = [[[NSBundle mainBundle] loadNibNamed:@"KeyboardTool" owner:nil options:nil] lastObject];
-    [self.view addSubview:textField];
 }
 
 - (void)friendsearch {

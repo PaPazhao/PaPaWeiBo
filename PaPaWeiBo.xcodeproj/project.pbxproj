@@ -24,6 +24,7 @@
 		5EF2FCFD1C87380400D4FB9C /* UIBarButtonItem+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF2FCFC1C87380400D4FB9C /* UIBarButtonItem+Extention.m */; };
 		5EF2FD091C8A7C5700D4FB9C /* KeyboardTool.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EF2FD081C8A7C5700D4FB9C /* KeyboardTool.xib */; };
 		5EF2FD0C1C8AB7C800D4FB9C /* LZSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF2FD0B1C8AB7C800D4FB9C /* LZSearchBar.m */; };
+		5EF2FD0F1C8AC6A100D4FB9C /* LZTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF2FD0E1C8AC6A100D4FB9C /* LZTitleButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,8 @@
 		5EF2FD081C8A7C5700D4FB9C /* KeyboardTool.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeyboardTool.xib; sourceTree = "<group>"; };
 		5EF2FD0A1C8AB7C800D4FB9C /* LZSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZSearchBar.h; sourceTree = "<group>"; };
 		5EF2FD0B1C8AB7C800D4FB9C /* LZSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZSearchBar.m; sourceTree = "<group>"; };
+		5EF2FD0D1C8AC6A100D4FB9C /* LZTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZTitleButton.h; sourceTree = "<group>"; };
+		5EF2FD0E1C8AC6A100D4FB9C /* LZTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZTitleButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,6 +277,8 @@
 		5E39D8271C8144BF00AF29E7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5EF2FD0D1C8AC6A100D4FB9C /* LZTitleButton.h */,
+				5EF2FD0E1C8AC6A100D4FB9C /* LZTitleButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -569,6 +574,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EF2FD0F1C8AC6A100D4FB9C /* LZTitleButton.m in Sources */,
 				5E39D87B1C834D7A00AF29E7 /* DiscoverController.m in Sources */,
 				5EF2FD0C1C8AB7C800D4FB9C /* LZSearchBar.m in Sources */,
 				5EF2FCFD1C87380400D4FB9C /* UIBarButtonItem+Extention.m in Sources */,
