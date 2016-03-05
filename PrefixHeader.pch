@@ -24,8 +24,8 @@
 
 // 随机色
 #define LZRamomColor    [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1]
-
-
+//是否是8.0之前的系统
+#define iOS6            ([[UIDevice currentDevice].systemVersion floatValue] < 7.0)
 
 
 #endif
