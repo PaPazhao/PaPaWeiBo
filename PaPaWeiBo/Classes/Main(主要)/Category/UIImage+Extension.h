@@ -11,4 +11,9 @@
 @interface UIImage (Extension)
  
 + (UIImage *) imageWithName:(NSString *)name ;
+
+/**
+ *  拉伸的方式创建一张图片
+ */
++ (UIImage *) resizeImageWithName:(NSString *)name ;
 @end

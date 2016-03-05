@@ -54,7 +54,7 @@
     NSMutableDictionary *disableTextAttr = [NSMutableDictionary dictionaryWithDictionary:textAttr];
     disableTextAttr[NSForegroundColorAttributeName] = [UIColor lightGrayColor];
     [appearance setTitleTextAttributes:disableTextAttr forState:UIControlStateDisabled];
-    
+     
     /** 设置背景的图片 */
     // 为了让某个按钮的背景消失，设置一直完全透明的背景图片
     [appearance setBackgroundImage:[UIImage imageNamed:@"navigationbar_button_background"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];

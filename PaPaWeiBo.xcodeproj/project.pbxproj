@@ -23,6 +23,7 @@
 		5EF2FCFA1C8736FA00D4FB9C /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF2FCF91C8736FA00D4FB9C /* UIView+Extension.m */; };
 		5EF2FCFD1C87380400D4FB9C /* UIBarButtonItem+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF2FCFC1C87380400D4FB9C /* UIBarButtonItem+Extention.m */; };
 		5EF2FD091C8A7C5700D4FB9C /* KeyboardTool.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EF2FD081C8A7C5700D4FB9C /* KeyboardTool.xib */; };
+		5EF2FD0C1C8AB7C800D4FB9C /* LZSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF2FD0B1C8AB7C800D4FB9C /* LZSearchBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,8 @@
 		5EF2FCFB1C87380400D4FB9C /* UIBarButtonItem+Extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extention.h"; sourceTree = "<group>"; };
 		5EF2FCFC1C87380400D4FB9C /* UIBarButtonItem+Extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extention.m"; sourceTree = "<group>"; };
 		5EF2FD081C8A7C5700D4FB9C /* KeyboardTool.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeyboardTool.xib; sourceTree = "<group>"; };
+		5EF2FD0A1C8AB7C800D4FB9C /* LZSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZSearchBar.h; sourceTree = "<group>"; };
+		5EF2FD0B1C8AB7C800D4FB9C /* LZSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZSearchBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -331,6 +334,8 @@
 		5E39D8361C8144C000AF29E7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5EF2FD0A1C8AB7C800D4FB9C /* LZSearchBar.h */,
+				5EF2FD0B1C8AB7C800D4FB9C /* LZSearchBar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -565,6 +570,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E39D87B1C834D7A00AF29E7 /* DiscoverController.m in Sources */,
+				5EF2FD0C1C8AB7C800D4FB9C /* LZSearchBar.m in Sources */,
 				5EF2FCFD1C87380400D4FB9C /* UIBarButtonItem+Extention.m in Sources */,
 				5E39D87E1C834D9700AF29E7 /* HomeController.m in Sources */,
 				5EF2FCFA1C8736FA00D4FB9C /* UIView+Extension.m in Sources */,

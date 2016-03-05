@@ -7,7 +7,7 @@
 //
 
 #import "DiscoverController.h"
-
+#import "LZSearchBar.h"
 @implementation DiscoverController
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -18,6 +18,18 @@
                                    target:self
                                    action:@selector(find)];
     self.navigationItem.rightBarButtonItem.enabled = NO;
+    
+    [self setupSearchBar];
+}
+
+/**
+ *  设置搜索框
+ */
+- (void) setupSearchBar {
+    LZSearchBar *searchBar = [LZSearchBar searchBar];
+    searchBar.width = 300;
+    searchBar.height = 30;
+    self.navigationItem.titleView = searchBar;
 }
 
 - (void)find {

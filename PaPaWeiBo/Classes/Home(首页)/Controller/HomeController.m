@@ -29,7 +29,6 @@
     textField.frame = CGRectMake(100, 100, 100, 30);
     textField.inputAccessoryView = [[[NSBundle mainBundle] loadNibNamed:@"KeyboardTool" owner:nil options:nil] lastObject];
     [self.view addSubview:textField];
-
 }
 
 - (void)friendsearch {

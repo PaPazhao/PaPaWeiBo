@@ -16,6 +16,6 @@
                 [[UIBarButtonItem alloc]initWithTitle:@"设置"
                                                 style:UIBarButtonItemStyleDone
                                                target:nil action:nil];
-    
+
 }
 @end
