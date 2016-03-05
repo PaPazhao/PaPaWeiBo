@@ -45,18 +45,21 @@
 
 }
 
-
 - (void) addChildViewController:(UIViewController *)childController
                       titleName:(NSString *)title
                       imageName:(NSString *)imageName
                    selectedName:(NSString *)selectedName{
     
+    
+#warning 这句代码过早的调用控制器的view，导致了控制器一创建，控制器的view就立即进行创建。
+    //如果过早的创建view导致先创建view，然后再调用导航appearance的设置全局的字体导致这个方法不起作用
+//    childController.view.backgroundColor = LZRamomColor;
+
     // 设置导航标题和tabbar的标题，这一句代码等效下面两行
     childController.title = title;
-    
 //    childController.navigationItem.title = title;   // 设置导航条的标题
 //    childController.tabBarItem.title = title;       // 设置tabBar的标题
-    childController.view.backgroundColor = LZRamomColor;
+
     childController.tabBarItem.selectedImage = [self originalImageWithName:selectedName];
     childController.tabBarItem.image = [self originalImageWithName:imageName];
     self.view.backgroundColor = [UIColor redColor];
@@ -65,7 +68,6 @@
     LZNavigationController *nav = [[LZNavigationController alloc]initWithRootViewController:childController];
     [self addChildViewController:nav];
 }
-
 
 - (UIImage *) originalImageWithName:(NSString *)name {
     UIImage *image = [UIImage imageWithName:name];

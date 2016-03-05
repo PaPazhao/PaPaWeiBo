@@ -10,6 +10,35 @@
 
 @implementation LZNavigationController
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    // 设置整个项目 UIBarButton 的样式
+    [self setupUIBarButtonStyle];
+}
+
+/**
+ *  设置整个项目 UIBarButton 的样式
+ *  通过 appearance 对象能修改整个项目中所有的 UIBarButton的样式
+ */
+- (void)setupUIBarButtonStyle {
+
+    UIBarButtonItem *appearance = [UIBarButtonItem appearance];
+    
+    NSMutableDictionary *textAttr = [NSMutableDictionary dictionary];
+    textAttr[NSFontAttributeName] = [UIFont systemFontOfSize:15];
+    textAttr[NSForegroundColorAttributeName] = [UIColor orangeColor];
+    [appearance setTitleTextAttributes:textAttr forState:UIControlStateNormal];
+    
+    NSMutableDictionary *highTextAttr = [NSMutableDictionary dictionary];
+    highTextAttr[NSForegroundColorAttributeName] = [UIColor blackColor];
+    [appearance setTitleTextAttributes:highTextAttr forState:UIControlStateHighlighted];
+    
+    NSMutableDictionary *disableTextAttr = [NSMutableDictionary dictionary];
+    disableTextAttr[NSForegroundColorAttributeName] = [UIColor lightGrayColor];
+    [appearance setTitleTextAttributes:disableTextAttr forState:UIControlStateDisabled];
+}
+
 /**
  *  拦截所有的 push 的控制，在这里设置所有的当push的时候处理的操作
  */

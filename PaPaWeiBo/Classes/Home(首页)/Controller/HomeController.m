@@ -23,6 +23,12 @@
     [UIBarButtonItem itemButtonWithImageName:@"navigationbar_pop"
                                highImageName:@"navigationbar_pop_highlighted"
                                       target:self action:@selector(pop)];
+    
+    UITextField *textField = [[UITextField alloc] init];
+    textField.backgroundColor = [UIColor redColor];
+    textField.frame = CGRectMake(100, 100, 100, 30);
+    textField.inputAccessoryView = [[[NSBundle mainBundle] loadNibNamed:@"KeyboardTool" owner:nil options:nil] lastObject];
+    [self.view addSubview:textField];
 
 }
 

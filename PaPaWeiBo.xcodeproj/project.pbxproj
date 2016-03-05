@@ -22,6 +22,7 @@
 		5EF2FCF61C8726C000D4FB9C /* LZNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF2FCF51C8726C000D4FB9C /* LZNavigationController.m */; };
 		5EF2FCFA1C8736FA00D4FB9C /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF2FCF91C8736FA00D4FB9C /* UIView+Extension.m */; };
 		5EF2FCFD1C87380400D4FB9C /* UIBarButtonItem+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF2FCFC1C87380400D4FB9C /* UIBarButtonItem+Extention.m */; };
+		5EF2FD091C8A7C5700D4FB9C /* KeyboardTool.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EF2FD081C8A7C5700D4FB9C /* KeyboardTool.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		5EF2FCF91C8736FA00D4FB9C /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		5EF2FCFB1C87380400D4FB9C /* UIBarButtonItem+Extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extention.h"; sourceTree = "<group>"; };
 		5EF2FCFC1C87380400D4FB9C /* UIBarButtonItem+Extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extention.m"; sourceTree = "<group>"; };
+		5EF2FD081C8A7C5700D4FB9C /* KeyboardTool.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeyboardTool.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +256,7 @@
 			children = (
 				5E39D87C1C834D9700AF29E7 /* HomeController.h */,
 				5E39D87D1C834D9700AF29E7 /* HomeController.m */,
+				5EF2FD081C8A7C5700D4FB9C /* KeyboardTool.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -535,6 +538,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EF2FD091C8A7C5700D4FB9C /* KeyboardTool.xib in Resources */,
 				5E39D84B1C8147E300AF29E7 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
