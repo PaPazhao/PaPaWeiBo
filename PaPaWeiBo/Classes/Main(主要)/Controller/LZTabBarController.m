@@ -74,5 +74,36 @@
     image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     return image;
 }
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+//    self.tabBar.backgroundImage = [UIImage resizeImageWithName:@"music"];
+    
+    [self removeBackgroundInTabBarButton];
+}
+
+
+- (void) removeBackgroundInTabBarButton{
+    for (UIView *child in self.tabBar.subviews) {
+        NSLog(@"%@",NSStringFromClass([child class]));
+        
+        if ([child isKindOfClass:NSClassFromString(@"UITabBarButton")]) {
+
+            for (UIView *childChild in child.subviews) {
+                NSLog(@"%@ -- %@ -- %@",NSStringFromClass([child class]) ,NSStringFromClass([childChild class]),NSStringFromClass([childChild.superclass class]));
+                
+                if ([[childChild.superclass class] isSubclassOfClass:[UILabel class]]) {
+                    UILabel *label = (UILabel *)childChild;
+                    label.textColor = [UIColor redColor];
+                }
+                
+                if ([[childChild.superclass class] isSubclassOfClass:[UIImageView class]]) {
+                    [childChild removeFromSuperview];
+                }
+            }
+        }
+    }
+}
+
 
 @end
