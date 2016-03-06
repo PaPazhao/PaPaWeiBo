@@ -19,6 +19,7 @@
 		5E39D87E1C834D9700AF29E7 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E39D87D1C834D9700AF29E7 /* HomeController.m */; };
 		5E39D8811C834DAC00AF29E7 /* MessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E39D8801C834DAC00AF29E7 /* MessageController.m */; };
 		5E39D8841C834E4200AF29E7 /* ProfileController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E39D8831C834E4200AF29E7 /* ProfileController.m */; };
+		5E66567D1C8BC9BF009A9271 /* LZDorpDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E66567C1C8BC9BF009A9271 /* LZDorpDownMenu.m */; };
 		5EF2FCF61C8726C000D4FB9C /* LZNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF2FCF51C8726C000D4FB9C /* LZNavigationController.m */; };
 		5EF2FCFA1C8736FA00D4FB9C /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF2FCF91C8736FA00D4FB9C /* UIView+Extension.m */; };
 		5EF2FCFD1C87380400D4FB9C /* UIBarButtonItem+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF2FCFC1C87380400D4FB9C /* UIBarButtonItem+Extention.m */; };
@@ -71,6 +72,8 @@
 		5E39D8801C834DAC00AF29E7 /* MessageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageController.m; sourceTree = "<group>"; };
 		5E39D8821C834E4200AF29E7 /* ProfileController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileController.h; sourceTree = "<group>"; };
 		5E39D8831C834E4200AF29E7 /* ProfileController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileController.m; sourceTree = "<group>"; };
+		5E66567B1C8BC9BF009A9271 /* LZDorpDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZDorpDownMenu.h; sourceTree = "<group>"; };
+		5E66567C1C8BC9BF009A9271 /* LZDorpDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZDorpDownMenu.m; sourceTree = "<group>"; };
 		5EF2FCF41C8726C000D4FB9C /* LZNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZNavigationController.h; sourceTree = "<group>"; };
 		5EF2FCF51C8726C000D4FB9C /* LZNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZNavigationController.m; sourceTree = "<group>"; };
 		5EF2FCF71C87285400D4FB9C /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -341,6 +344,8 @@
 			children = (
 				5EF2FD0A1C8AB7C800D4FB9C /* LZSearchBar.h */,
 				5EF2FD0B1C8AB7C800D4FB9C /* LZSearchBar.m */,
+				5E66567B1C8BC9BF009A9271 /* LZDorpDownMenu.h */,
+				5E66567C1C8BC9BF009A9271 /* LZDorpDownMenu.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -576,6 +581,7 @@
 			files = (
 				5EF2FD0F1C8AC6A100D4FB9C /* LZTitleButton.m in Sources */,
 				5E39D87B1C834D7A00AF29E7 /* DiscoverController.m in Sources */,
+				5E66567D1C8BC9BF009A9271 /* LZDorpDownMenu.m in Sources */,
 				5EF2FD0C1C8AB7C800D4FB9C /* LZSearchBar.m in Sources */,
 				5EF2FCFD1C87380400D4FB9C /* UIBarButtonItem+Extention.m in Sources */,
 				5E39D87E1C834D9700AF29E7 /* HomeController.m in Sources */,

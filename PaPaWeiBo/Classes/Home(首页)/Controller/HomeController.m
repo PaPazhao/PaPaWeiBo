@@ -8,6 +8,11 @@
 
 #import "HomeController.h"
 #import "LZTitleButton.h"
+#import "LZDorpDownMenu.h"
+
+@interface HomeController () <LZDorpDownMenuDelegate>
+
+@end
 
 @implementation HomeController
 - (void)viewDidLoad {
@@ -17,12 +22,6 @@
     
     //设置导航栏的标题button
     [self setupNavigationTitleView];
-    
-    UITextField *textField = [[UITextField alloc] init];
-    textField.backgroundColor = [UIColor redColor];
-    textField.frame = CGRectMake(100, 100, 150, 30);
-    textField.inputAccessoryView = [[[NSBundle mainBundle] loadNibNamed:@"KeyboardTool" owner:nil options:nil] lastObject];
-    [self.view addSubview:textField];
 }
 
 
@@ -42,6 +41,19 @@
 
 - (void)buttonClick:(UIButton *)button {
     [button setImage:[UIImage imageNamed:@"navigationbar_arrow_up"] forState:UIControlStateNormal];
+    
+    LZDorpDownMenu *menu = [LZDorpDownMenu menu];
+    menu.delegate = self;
+    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 100, 200)];
+    [btn setTitle:@"haha" forState:UIControlStateHighlighted];
+    menu.content = btn;
+    [menu showFrom:button];
+}
+
+- (void)willDorpDownMenuDismiss {
+    LZTitleButton *titleBtn = (LZTitleButton *)self.navigationItem.titleView;
+    
+    [titleBtn setImage:[UIImage imageNamed:@"navigationbar_arrow_down"] forState:UIControlStateNormal];
 }
 
 /**
