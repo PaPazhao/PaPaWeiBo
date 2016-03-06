@@ -13,16 +13,42 @@
 #import "DiscoverController.h"
 #import "MessageController.h"
 #import "LZNavigationController.h"
-
-@interface LZTabBarController ()
+#import <objc/runtime.h>
+#import "LZTabBar.h"
+@interface LZTabBarController () <UITabBarControllerDelegate>
 
 @end
+
+//    objc_setAssociatedObject
+
 
 @implementation LZTabBarController
 
 - (void)viewDidLoad {
-    [super viewDidLoad]; 
     
+    [super viewDidLoad];
+    
+    // 添加所有的自控制器
+    [self addAllChildController];
+    
+    // 设置自定义的TabBar，更换掉系统自带的tabBar
+    [self setupCustomTabBar];
+}
+
+/**
+ *  设置自定义的TabBar，更换掉系统自带的tabBar
+ */
+- (void) setupCustomTabBar {
+    LZTabBar *customTabBar = [[LZTabBar alloc]init];
+    customTabBar.backgroundImage = [UIImage imageNamed:@"tabbar_background"];
+    customTabBar.selectionIndicatorImage = [UIImage imageNamed:@"navigationbar_button_background"];
+    [self setValue:customTabBar forKeyPath:@"tabBar"];
+}
+
+/**
+ *  添加所有的自控制器
+ */
+- (void) addAllChildController {
     HomeController *home = [[HomeController alloc]init];
     [self addChildViewController:home titleName:@"首页"
                        imageName:@"tabbar_home"
@@ -42,7 +68,6 @@
     [self addChildViewController:profile titleName:@"我"
                        imageName:@"tabbar_profile"
                     selectedName:@"tabbar_profile_selected"];
-
 }
 
 - (void) addChildViewController:(UIViewController *)childController
@@ -62,6 +87,11 @@
 
     childController.tabBarItem.selectedImage = [self originalImageWithName:selectedName];
     childController.tabBarItem.image = [self originalImageWithName:imageName];
+    
+    NSMutableDictionary *selectedTextAttrs = [NSMutableDictionary dictionary];
+    selectedTextAttrs[NSForegroundColorAttributeName] = [UIColor orangeColor];
+    [childController.tabBarItem setTitleTextAttributes:selectedTextAttrs forState:UIControlStateSelected];
+
     self.view.backgroundColor = [UIColor redColor];
  
     // 为每个控制器套一层导航控制器
@@ -74,36 +104,15 @@
     image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     return image;
 }
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    
-//    self.tabBar.backgroundImage = [UIImage resizeImageWithName:@"music"];
-    
-    [self removeBackgroundInTabBarButton];
+
+/**
+ *  自定义TabBar的 PlusButton点击事件的代理（注意，控制器并没有设置tabBar的代理依然能执行这个方法，说明在tabbar内部自动设置了控制器成为其代理）
+ */
+- (void)tabBarDidClickPlusButton {
+    UIViewController *vc1 = [[UIViewController alloc]init];
+    vc1.view.backgroundColor = LZRamomColor;
+    LZNavigationController *nav = [[LZNavigationController alloc]initWithRootViewController:vc1];
+    [self presentViewController:nav animated:YES completion:nil];
+    LZLogFunc();
 }
-
-
-- (void) removeBackgroundInTabBarButton{
-    for (UIView *child in self.tabBar.subviews) {
-        NSLog(@"%@",NSStringFromClass([child class]));
-        
-        if ([child isKindOfClass:NSClassFromString(@"UITabBarButton")]) {
-
-            for (UIView *childChild in child.subviews) {
-                NSLog(@"%@ -- %@ -- %@",NSStringFromClass([child class]) ,NSStringFromClass([childChild class]),NSStringFromClass([childChild.superclass class]));
-                
-                if ([[childChild.superclass class] isSubclassOfClass:[UILabel class]]) {
-                    UILabel *label = (UILabel *)childChild;
-                    label.textColor = [UIColor redColor];
-                }
-                
-                if ([[childChild.superclass class] isSubclassOfClass:[UIImageView class]]) {
-                    [childChild removeFromSuperview];
-                }
-            }
-        }
-    }
-}
-
-
 @end
