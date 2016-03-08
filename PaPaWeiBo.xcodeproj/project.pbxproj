@@ -14,13 +14,15 @@
 		5E39D84B1C8147E300AF29E7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E39D84A1C8147E300AF29E7 /* Images.xcassets */; };
 		5E39D8721C833E9500AF29E7 /* LZTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E39D8711C833E9500AF29E7 /* LZTabBarController.m */; };
 		5E39D8751C83455B00AF29E7 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E39D8741C83455B00AF29E7 /* UIImage+Extension.m */; };
-		5E39D8781C834D6600AF29E7 /* ComposeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E39D8771C834D6500AF29E7 /* ComposeController.m */; };
 		5E39D87B1C834D7A00AF29E7 /* DiscoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E39D87A1C834D7A00AF29E7 /* DiscoverController.m */; };
 		5E39D87E1C834D9700AF29E7 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E39D87D1C834D9700AF29E7 /* HomeController.m */; };
 		5E39D8811C834DAC00AF29E7 /* MessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E39D8801C834DAC00AF29E7 /* MessageController.m */; };
 		5E39D8841C834E4200AF29E7 /* ProfileController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E39D8831C834E4200AF29E7 /* ProfileController.m */; };
 		5E66567D1C8BC9BF009A9271 /* LZDorpDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E66567C1C8BC9BF009A9271 /* LZDorpDownMenu.m */; };
 		5E6656801C8C045C009A9271 /* LZTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E66567F1C8C045C009A9271 /* LZTabBar.m */; };
+		5E6656CA1C8C28AE009A9271 /* LZComposeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6656C91C8C28AE009A9271 /* LZComposeController.m */; };
+		5E6656CD1C8C51F8009A9271 /* LZNewFeatureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6656CC1C8C51F8009A9271 /* LZNewFeatureController.m */; };
+		5E6656D11C8C52A2009A9271 /* LZSoftVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6656D01C8C52A2009A9271 /* LZSoftVersion.m */; };
 		5EF2FCF61C8726C000D4FB9C /* LZNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF2FCF51C8726C000D4FB9C /* LZNavigationController.m */; };
 		5EF2FCFA1C8736FA00D4FB9C /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF2FCF91C8736FA00D4FB9C /* UIView+Extension.m */; };
 		5EF2FCFD1C87380400D4FB9C /* UIBarButtonItem+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF2FCFC1C87380400D4FB9C /* UIBarButtonItem+Extention.m */; };
@@ -63,8 +65,6 @@
 		5E39D8711C833E9500AF29E7 /* LZTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZTabBarController.m; sourceTree = "<group>"; };
 		5E39D8731C83455B00AF29E7 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
 		5E39D8741C83455B00AF29E7 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
-		5E39D8761C834D6500AF29E7 /* ComposeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposeController.h; sourceTree = "<group>"; };
-		5E39D8771C834D6500AF29E7 /* ComposeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeController.m; sourceTree = "<group>"; };
 		5E39D8791C834D7A00AF29E7 /* DiscoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverController.h; sourceTree = "<group>"; };
 		5E39D87A1C834D7A00AF29E7 /* DiscoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverController.m; sourceTree = "<group>"; };
 		5E39D87C1C834D9700AF29E7 /* HomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeController.h; sourceTree = "<group>"; };
@@ -77,6 +77,12 @@
 		5E66567C1C8BC9BF009A9271 /* LZDorpDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZDorpDownMenu.m; sourceTree = "<group>"; };
 		5E66567E1C8C045C009A9271 /* LZTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZTabBar.h; sourceTree = "<group>"; };
 		5E66567F1C8C045C009A9271 /* LZTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZTabBar.m; sourceTree = "<group>"; };
+		5E6656C81C8C28AE009A9271 /* LZComposeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZComposeController.h; sourceTree = "<group>"; };
+		5E6656C91C8C28AE009A9271 /* LZComposeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZComposeController.m; sourceTree = "<group>"; };
+		5E6656CB1C8C51F8009A9271 /* LZNewFeatureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZNewFeatureController.h; sourceTree = "<group>"; };
+		5E6656CC1C8C51F8009A9271 /* LZNewFeatureController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZNewFeatureController.m; sourceTree = "<group>"; };
+		5E6656CF1C8C52A2009A9271 /* LZSoftVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZSoftVersion.h; sourceTree = "<group>"; };
+		5E6656D01C8C52A2009A9271 /* LZSoftVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZSoftVersion.m; sourceTree = "<group>"; };
 		5EF2FCF41C8726C000D4FB9C /* LZNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZNavigationController.h; sourceTree = "<group>"; };
 		5EF2FCF51C8726C000D4FB9C /* LZNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZNavigationController.m; sourceTree = "<group>"; };
 		5EF2FCF71C87285400D4FB9C /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -200,8 +206,8 @@
 		5E39D81D1C8144BF00AF29E7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				5E39D8761C834D6500AF29E7 /* ComposeController.h */,
-				5E39D8771C834D6500AF29E7 /* ComposeController.m */,
+				5E6656C81C8C28AE009A9271 /* LZComposeController.h */,
+				5E6656C91C8C28AE009A9271 /* LZComposeController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -292,6 +298,7 @@
 		5E39D8281C8144BF00AF29E7 /* Main(主要) */ = {
 			isa = PBXGroup;
 			children = (
+				5E6656CE1C8C528E009A9271 /* Tool */,
 				5E39D8291C8144BF00AF29E7 /* Category */,
 				5E39D8301C8144C000AF29E7 /* Controller */,
 				5E39D8311C8144C000AF29E7 /* Model */,
@@ -401,6 +408,8 @@
 		5E39D83C1C8144C000AF29E7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5E6656CB1C8C51F8009A9271 /* LZNewFeatureController.h */,
+				5E6656CC1C8C51F8009A9271 /* LZNewFeatureController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -450,6 +459,15 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		5E6656CE1C8C528E009A9271 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				5E6656CF1C8C52A2009A9271 /* LZSoftVersion.h */,
+				5E6656D01C8C52A2009A9271 /* LZSoftVersion.m */,
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -593,13 +611,15 @@
 				5EF2FCFA1C8736FA00D4FB9C /* UIView+Extension.m in Sources */,
 				5E6656801C8C045C009A9271 /* LZTabBar.m in Sources */,
 				5E39D8841C834E4200AF29E7 /* ProfileController.m in Sources */,
+				5E6656CD1C8C51F8009A9271 /* LZNewFeatureController.m in Sources */,
+				5E6656D11C8C52A2009A9271 /* LZSoftVersion.m in Sources */,
 				5E39D8721C833E9500AF29E7 /* LZTabBarController.m in Sources */,
 				5E39D8471C8144C000AF29E7 /* main.m in Sources */,
-				5E39D8781C834D6600AF29E7 /* ComposeController.m in Sources */,
 				5E39D8461C8144C000AF29E7 /* AppDelegate.m in Sources */,
 				5E39D8751C83455B00AF29E7 /* UIImage+Extension.m in Sources */,
 				5E39D8811C834DAC00AF29E7 /* MessageController.m in Sources */,
 				5EF2FCF61C8726C000D4FB9C /* LZNavigationController.m in Sources */,
+				5E6656CA1C8C28AE009A9271 /* LZComposeController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

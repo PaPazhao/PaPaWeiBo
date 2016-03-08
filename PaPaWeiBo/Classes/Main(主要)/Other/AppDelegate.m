@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "LZTabBarController.h"
+#import "LZNewFeatureController.h"
+#import "LZSoftVersion.h"
 @interface AppDelegate ()
 
 @end
@@ -22,7 +24,19 @@
     self.window = [[UIWindow alloc]init];
     self.window.frame = [UIScreen mainScreen].bounds;
  
-    self.window.rootViewController = [[LZTabBarController alloc]init];
+    
+//    NSString *currentVersion = [LZSoftVersion currentSoftVersion];
+//    NSString *lastVersion = [LZSoftVersion lastSotfVersion];
+//    
+//    NSLog(@"%@ %@",currentVersion, lastVersion );
+//    
+//    if ([currentVersion isEqualToString:lastVersion]) {
+//        self.window.rootViewController = [[LZTabBarController alloc]init];
+//    } else {
+//        [LZSoftVersion saveCurrentSoftVersion];
+        self.window.rootViewController = [[LZNewFeatureController alloc]init];
+//    }
+    
 
     // 3、显示windo
     [self.window makeKeyAndVisible];

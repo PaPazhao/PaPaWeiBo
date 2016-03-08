@@ -31,7 +31,7 @@
 // 屏幕尺寸
 #define ScreenSize      [UIScreen mainScreen].bounds.size
 #define ScreenWidth     ScreenSize.width
-#define ScreenHeigh     ScreenSize.heigh
+#define ScreenHeigh     ScreenSize.height
 
 #endif
 

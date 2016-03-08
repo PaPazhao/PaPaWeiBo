@@ -15,6 +15,7 @@
 #import "LZNavigationController.h"
 #import <objc/runtime.h>
 #import "LZTabBar.h"
+#import "LZComposeController.h"
 @interface LZTabBarController () <UITabBarControllerDelegate>
 
 @end
@@ -109,10 +110,8 @@
  *  自定义TabBar的 PlusButton点击事件的代理（注意，控制器并没有设置tabBar的代理依然能执行这个方法，说明在tabbar内部自动设置了控制器成为其代理）
  */
 - (void)tabBarDidClickPlusButton {
-    UIViewController *vc1 = [[UIViewController alloc]init];
-    vc1.view.backgroundColor = LZRamomColor;
-    LZNavigationController *nav = [[LZNavigationController alloc]initWithRootViewController:vc1];
+    LZComposeController *composeVC = [[LZComposeController alloc]init];
+    LZNavigationController *nav = [[LZNavigationController alloc]initWithRootViewController:composeVC];
     [self presentViewController:nav animated:YES completion:nil];
-    LZLogFunc();
 }
 @end
